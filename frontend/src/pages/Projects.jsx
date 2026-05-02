@@ -89,7 +89,7 @@ const Projects = () => {
       <main className="ml-64 flex-1 p-8">
         <div className="max-w-5xl mx-auto">
           {/* Header */}
-          <div className="flex items-center justify-between mb-8 animate-fade-in">
+          <div className="flex items-center justify-between mb-6 animate-fade-in">
             <div>
               <h2 className="text-2xl font-bold text-white">Projects</h2>
               <p className="text-slate-400 text-sm mt-1">{projects.length} project{projects.length !== 1 ? 's' : ''}</p>
@@ -100,6 +100,18 @@ const Projects = () => {
               </button>
             )}
           </div>
+
+          {/* Admin Info Banner */}
+          {isAdmin && (
+            <div className="mb-6 bg-indigo-500/10 border border-indigo-500/20 rounded-xl px-4 py-3 text-sm text-indigo-300 animate-fade-in">
+              <p className="font-semibold mb-1">📋 Admin Workflow</p>
+              <ol className="list-decimal list-inside space-y-0.5 text-indigo-200/80 text-xs">
+                <li>Create a project below.</li>
+                <li>Click <strong>"Manage Members"</strong> on a project card to add users — members only see projects they're added to.</li>
+                <li>Go to <strong>Task Board</strong> → create a task and assign it to a member — members only see tasks assigned to them.</li>
+              </ol>
+            </div>
+          )}
 
           {/* Create Project Modal */}
           {showForm && (

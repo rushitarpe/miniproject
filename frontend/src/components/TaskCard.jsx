@@ -50,7 +50,8 @@ const TaskCard = ({ task, onStatusChange, onDelete }) => {
         <select
           value={task.status}
           onChange={(e) => onStatusChange(task._id, e.target.value)}
-          className="flex-1 bg-white/5 border border-white/10 rounded-lg px-2 py-1.5 text-xs text-slate-300 focus:outline-none focus:ring-1 focus:ring-indigo-500 cursor-pointer"
+          className="flex-1 bg-slate-800 border border-white/10 rounded-lg px-2 py-1.5 text-xs text-slate-300 focus:outline-none focus:ring-1 focus:ring-indigo-500 cursor-pointer"
+          style={{ colorScheme: 'dark' }}
         >
           <option value="Pending">Pending</option>
           <option value="In Progress">In Progress</option>
